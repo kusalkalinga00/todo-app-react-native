@@ -72,6 +72,9 @@ const TodoScreen = () => {
   //handle store todo
 
   const handleStoreData = async () => {
+    if (todo === "" || todo === null) {
+      return;
+    }
     //make object of todo
     const newTodo = {
       id: new Date().getTime(),
